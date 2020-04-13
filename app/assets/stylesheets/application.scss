@@ -1,0 +1,421 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body,html{
+		height: 100%;
+		font-family: Georgia;
+	}
+	
+	.this_color {
+		color: #701818;
+	}
+	
+
+	/* remove outer padding */
+	.main .row{
+		padding: 0px;
+		margin: 0px;
+	}
+
+	/*Remove rounded coners*/
+
+	nav.sidebar.navbar {
+		border-radius: 0px;
+	}
+	
+
+	nav.sidebar, .main{
+		-webkit-transition: margin 300ms ease-out;
+	    -moz-transition: margin 300ms ease-out;
+	    -o-transition: margin 300ms ease-out;
+	    transition: margin 300ms ease-out;
+	}
+
+	/* Add gap to nav and right windows.*/
+	.main{
+		padding: 10px 10px 0 10px;
+	}
+
+	/* .....NavBar: Icon only with coloring/layout.....*/
+
+	/*small/medium side display*/
+	@media (min-width: 768px) {
+
+		/*Allow main to be next to Nav*/
+		.main{
+			position: absolute;
+			width: calc(100% - 40px); /*keeps 100% minus nav size*/
+			margin-left: 40px;
+			float: right;
+		}
+
+		/*lets nav bar to be showed on mouseover*/
+		nav.sidebar:hover + .main{
+			margin-left: 200px;
+		}
+		
+
+		/*Center Brand*/
+		nav.sidebar.navbar.sidebar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+			margin-left: 0px;
+			color: #c99b91;
+			font-weight: bold;
+			text-shadow: -1px 0 black, 0 .5px black, .5px 0 black, 0 -1px black;
+		}
+		/*Center Brand*/
+		nav.sidebar .navbar-brand, nav.sidebar .navbar-header{
+			text-align: center;
+			width: 100%;
+			margin-left: 0px;
+			background-color: #006AA0;
+		}
+
+		/*Center Icons*/
+		nav.sidebar a a:hover{
+			padding-right: 13px;
+		}
+		
+		/*External Link Icons*/
+		.external-icon {
+			width: 32px;
+			margin: 4px;
+		}
+		
+		/*Glyphicon Colors*/
+		.glyph_color {
+			color: #000;
+		}
+
+		/*adds border top to first nav box */
+		nav.sidebar .navbar-nav > li:first-child{
+			border-top: 1px #e5e5e5 solid;
+		}
+
+		/*adds border to bottom nav boxes*/
+		nav.sidebar .navbar-nav > li{
+			border-bottom: 1px #e5e5e5 solid;
+		}
+
+		/* Colors/style dropdown box*/
+		nav.sidebar .navbar-nav .open .dropdown-menu {
+			position: static;
+			float: none;
+			width: auto;
+			margin-top: 0;
+			background-color: #758181;
+			border: 0;
+			-webkit-box-shadow: none;
+			box-shadow: none;
+		}
+
+		/*allows nav box to use 100% width*/
+		nav.sidebar .navbar-collapse, nav.sidebar .container-fluid{
+			padding: 0 0px 0 0px;
+		}
+
+		/*colors dropdown box text */
+		.navbar-inverse .navbar-nav .open .dropdown-menu>li>a {
+			color: #fffe8f;
+			height: auto;
+		}
+
+		/*gives sidebar width/height*/
+		nav.sidebar{
+			width: 200px;
+			height: 100%;
+			margin-left: -160px;
+			float: left;
+			z-index: 8000;
+			margin-bottom: 0px;
+			background-color: #c6d5ea;
+		}
+
+		/*give sidebar 100% width;*/
+		nav.sidebar li {
+			width: 100%;
+		}
+
+		/* Move nav to full on mouse over*/
+		nav.sidebar:hover{
+			color: #fffe8f;
+			margin-left: 0px;
+		}
+		/*for hiden things when navbar hidden*/
+		.forAnimate{
+			opacity: 0;
+		}
+	}
+
+	/* .....NavBar: Fully showing nav bar..... */
+
+	@media (min-width: 1330px) {
+
+		/*Allow main to be next to Nav*/
+		.main{
+			width: calc(100% - 200px); /*keeps 100% minus nav size*/
+			margin-left: 200px;
+		}
+		
+		a:hover {
+			color: #701818;
+		}
+
+		/*Show all nav*/
+		nav.sidebar{
+			margin-left: 0px;
+			float: left;
+		}
+		/*Show hidden items on nav*/
+		nav.sidebar .forAnimate{
+			opacity: 1;
+		}
+	}
+
+	nav.sidebar .navbar-nav .open .dropdown-menu>li>a:hover, nav.sidebar .navbar-nav .open .dropdown-menu>li>a:focus {
+		/* color: #5f4e3e;*/
+		background-color: #ddc6a6;
+	}
+	
+	.open {
+	    background-color: #ddc6a6;
+	}
+	
+	a:hover {
+		color: #701818;
+	}
+
+	nav:hover .forAnimate{
+		color: #ecdfd6;
+		opacity: 1;
+	}
+	section{
+		padding-left: 15px;
+	}
+	
+	/*Hero banner styles*/
+	.hero-spacer {
+    	margin-top: 50px;
+	}
+
+	.hero-feature {
+    	margin-bottom: 30px;
+	}
+	
+	.mpsection {
+		margin: 3em;
+	}
+	
+	.row {
+  		margin-right: -15px;
+  		margin-left: -15px;
+	}
+	
+	.jumbotron {
+  		padding-top: 30px;
+  		padding-bottom: 30px;
+  		margin-bottom: 30px;
+  		color: inherit;
+  		background-color: #eee;
+	}
+	
+	.jumbotron p {
+  		margin-bottom: 15px;
+ 		font-size: 21px;
+  		font-weight: 200;
+	}
+	.jumbotron > hr {
+  		border-top-color: #d5d5d5;
+	}
+	
+	.container .jumbotron,
+	.container-fluid .jumbotron {
+  		padding-right: 15px;
+  		padding-left: 15px;
+  		border-radius: 6px;
+	}
+	
+	.jumbotron .container {
+  		max-width: 100%;
+	}
+	
+	@media screen and (min-width: 768px) {
+  		.jumbotron {
+    		padding-top: 48px;
+    		padding-bottom: 48px;
+  		}
+  		
+  		a:hover {
+			color: #701818;
+		}
+  		
+  		.container .jumbotron,
+  		.container-fluid .jumbotron {
+    		padding-right: 60px;
+    		padding-left: 60px;
+  		}
+  		
+  		.jumbotron h1,
+  		.jumbotron .h1 {
+    		font-size: 63px;
+  		}
+	}
+	
+	.pageone {
+		margin-left: 15px;
+		margin-right: 15px;
+	}
+	
+	/*Fit images against sidebar */
+	.relate_sidebar_image {
+		margin-left: 15px;
+	}
+	
+	.navbar-default .navbar-nav>li>a:hover {
+  		background-color: #B0B0B0;
+  		color: red;
+	}
+	
+	ul.nav a:hover { 
+		color: #283442 !important;
+	}
+	
+	/* Splurty logo */
+	.circle {
+    	font-weight:bold;
+    	font-style: italic;
+    	position: relative;
+    	border-radius: 100%;
+    	background: #f84342;
+    	border: 1px solid #F7F7F7;
+    	width: 85px;
+    	height: 85px;
+    	margin: 15px 15px;
+    	text-align: center;
+    	color: #FFF;
+    	font-size: 10px;
+    	line-height: 16px;
+    	cursor: pointer;
+    	transform:rotate(11deg);
+    	-ms-transform:rotate(11deg); /* IE 9 */
+    	-webkit-transform:rotate(11deg); /* Opera, Chrome, and Safari */
+	}
+	
+	/* About Page Styles */
+	.about_offset {
+		margin-left: 25px;
+	}
+	
+	/* Holy City Styles */
+	.holy_city_main {
+		line-height: 65%;
+		margin-left: 150px;
+		color: #000;
+		margin-bottom: 75px;
+		p {
+			text-indent: 63px;
+			font-size: 15px;
+		}
+	}
+	
+	.link_style_hc:hover {
+		text-decoration: none;
+		color: #000;
+	}
+	
+	.link_style_hc {
+		color: #000;
+		text-indent: 50px;
+	}
+	
+	#section {
+		font-style: italic;
+		text-indent: 25px;
+	}
+	
+	#title_holy {
+		text-indent: 100px;
+		font-size: 45px;
+	}
+	
+	.holy_city_poems {
+		line-height: 70%;
+		margin-left: 100px;
+		margin-top: 75px;
+		color: #000;
+		margin-bottom: 175px;
+		p {
+			text-indent: 63px;
+			font-size: 18px;
+		}
+	}
+	
+	#cythera {
+		text-indent: 83px;
+	}
+	
+	#lt1 {
+		text-indent: 113px;
+	}
+	
+	#lt2 {
+		text-indent: 175px;
+	}
+	
+	#lt3 {
+		text-indent: 140px;
+	}
+	
+	#lt4 {
+		text-indent: 93px;
+	}
+	
+	#lt5 {
+		text-indent: 73px;
+	}
+	
+	#lt6 {
+		text-indent: 118px;
+	}
+	
+	#lt7 {
+		text-indent: 215px;
+	}
+	
+	#diptych {
+		text-indent: 80px;
+	}
+	
+	#hajj {
+		font-style: italic;
+		text-indent: 75px;
+	}
+	
+	#ode2 {
+		text-indent: 110px;
+	}
+	
+	#ode1 {
+		text-indent: 85px;
+	}
+	
+	#d0 {
+		margin-top: 250px;
+		text-indent: 190px;
+		font-size: 70px;
+	}
+	
+	/* Page selection bar controls */
+	.pager {
+		margin-right: 400px;
+	}
+	
+	.previous:hover .next:hover {
+			text-decoration: none !important;
+	}
+	
+	.sidebar_color {
+		color: #fffe8f
+	}
+	
+	/*Drop-Up menu styles */
+	
